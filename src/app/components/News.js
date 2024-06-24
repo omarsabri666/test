@@ -1,4 +1,4 @@
-import img from "/public/our.PNG"
+import img from "/public/omar.PNG"
 function News() {
     return (
       <section
