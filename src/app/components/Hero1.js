@@ -2,6 +2,9 @@ import Lang from "/public/lang.png";
 import Hero from "/public/Video.webp";
 import Logo from "/public/Logo.svg";
 import { CiMenuBurger } from "react-icons/ci";
+import BackgroundVideo from 'next-video/background-video';
+import getStarted from '/public/vv.mp4';
+
 
 
 import Image from "next/image";
@@ -9,27 +12,18 @@ import NavBar from "./NavBar";
 
 function Hero1() {
   return (
-    <section
-      className=" h-screen md:px-14  relative flex flex-col   py-5"
-      style={{
-        backgroundImage: `
-          linear-gradient(
-            to bottom,
-            rgba(15, 13, 15, 0.86),
-            rgba(12, 20, 42, 0.30),
-            rgba(8, 27, 73, 0.15),
-            rgba(4, 36, 106, 0.32),
-            rgba(0, 43, 135, 1.0)
-          ),
-          url(${Hero.src})
-        `,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-     <NavBar/>
-      <main className="  text-white  justify-end text-center md:text-start  h-full flex mb-20  gap-8  flex-col ">
+    <section className=" h-screen md:px-14  relative flex flex-col   py-5">
+      <video
+        className="background-video"
+        autoPlay
+        muted
+        loop
+        src={require("/public/vv.mp4")}
+      />
+      <div className="gradient-overlay"></div>
+
+      <NavBar />
+      <main className="  content  text-white  justify-end text-center md:text-start  h-full flex mb-1  gap-8  flex-col ">
         <h1 className=" text-7xl ">Lorem ipsum dolor</h1>
         <p className=" text-sm">
           Lorem ipsum dolor sit amet consectetur. Et ultrices auctor tempor urna

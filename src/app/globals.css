@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 13, 15, 0.86) 0%,
+    rgba(12, 20, 42, 0.3) 23.14%,
+    rgba(8, 27, 73, 0.15) 49.73%,
+    rgba(4, 36, 106, 0.32) 76.92%,
+    #002b87 100%
+  );
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .content {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
