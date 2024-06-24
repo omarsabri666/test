@@ -1,11 +1,11 @@
-// import img from "/public/omar.PNG"
+import img from "/public/omar.webp"
 function News() {
     return (
       <section
         id="Careers"
         style={{
           background:
-            `linear-gradient(179deg, #002B87 42.14%, rgba(11, 68, 170, 0.81) 60.79%, rgba(61, 129, 211, 0.88) 79.44%, rgba(96, 161, 226, 0.77) 99.24%)`,
+            `linear-gradient(179deg, #002B87 42.14%, rgba(11, 68, 170, 0.81) 60.79%, rgba(61, 129, 211, 0.88) 79.44%, rgba(96, 161, 226, 0.77) 99.24%) , url(${img.src})` ,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

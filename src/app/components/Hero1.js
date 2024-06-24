@@ -1,5 +1,5 @@
 import Lang from "/public/lang.png";
-import Hero from "/public/Video.png";
+import Hero from "/public/Video.webp";
 import Logo from "/public/Logo.svg";
 import { CiMenuBurger } from "react-icons/ci";
 
