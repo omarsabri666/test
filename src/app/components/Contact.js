@@ -92,7 +92,7 @@ function Contact() {
         </div>
         <form
           onSubmit={Submit}
-          className=" md:w-1/2 w-full mx-2 md:mx-0 flex flex-col justify-center items-center gap-5 bg-[#F2F4F9] shadow-md rounded-md"
+          className=" md:w-1/2 w-full mx-2 md:mx-8 translate-y-32  flex flex-col justify-center items-center gap-5 bg-[#F2F4F9] shadow-md rounded-md"
         >
           <input
             type="text"

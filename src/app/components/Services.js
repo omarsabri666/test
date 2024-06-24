@@ -1,6 +1,7 @@
 import card1 from "/public/card1.png";
 import card6 from "/public/card6.png";
 import card5 from "/public/card5.png";
+import bg from "/public/paths.png";
 
 function Services() {
   return (
@@ -101,7 +102,7 @@ function Services() {
         className=" h-[120vh] flex flex-col px-8 justify-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, #002B87
-, #002B87 )`,
+, #002B87 ),url(${bg.src})`,
         }}
       >
         <div className=" flex   flex-col gap-3 w-full text-center md:text-start md:w-2/5">
