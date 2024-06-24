@@ -8,7 +8,7 @@ function Services() {
       <div className=" flex flex-col md:px-4 text-center md:text-start gap-4  md:gap-0">
         <h4 className="  text-[#0F0D0F] text-4xl">Duroub Services</h4>
         <div className=" flex items-center justify-between flex-col gap-4 md:gap-0 md:flex-row  ">
-          <p className=" text-[#0F0D0F]">
+          <p className=" md:w-1/2 mt-4  text-[#0F0D0F]">
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
           </p>
