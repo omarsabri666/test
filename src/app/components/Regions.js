@@ -2,7 +2,7 @@ import about from "/public/about.png";
 
 function Regions() {
   return (
-    <section id="News" className=" px-4 my-20 ">
+    <section id="News" className="  px-4 my-20 ">
       <div className=" flex text-center md:text-start flex-col my-10 gap-5 ">
         <h4 className="  text-[#0F0D0F] text-4xl">Latest News</h4>
         <div className=" flex items-center  flex-col md:flex-row gap-4 md:gap-0 justify-between ">
