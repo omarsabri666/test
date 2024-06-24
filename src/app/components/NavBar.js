@@ -31,7 +31,7 @@ function NavBar() {
         <header className=" text-white px-2 md:px-0  ">
           <nav className=" flex justify-between   items-center">
             <Image src={Logo} width={200} height={50} alt=" Logo" />
-            <ul className=" hidden  md:flex items-center md:mr-10   gap-5">
+            <ul className=" hidden text-[16px]  md:flex items-center md:mr-10   gap-5">
               <li>
                 <a href="#About">About Us</a>
               </li>
