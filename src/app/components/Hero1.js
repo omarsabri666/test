@@ -20,13 +20,14 @@ function Hero1() {
         autoPlay
         muted
         loop
-        src={require("/public/petal_20231227_205731.mp4")}
+        src={require("/public/truck.mp4")}
       />
       <div className="gradient-overlay"></div>
 
       <NavBar />
-      <main className="    text-white  justify-end text-center md:text-start  h-full flex mb-20  gap-8  flex-col ">
+      <main className=" content   text-white  justify-end text-center md:text-start  h-full flex   gap-8  flex-col ">
         <motion.div
+        className=" flex flex-col gap-8 mt-20"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -38,7 +39,7 @@ function Hero1() {
             duration: 0.1,
           }}
         >
-          <h1 className=" text-7xl ">Lorem ipsum dolor</h1>
+          <h1 className="  text-7xl ">Lorem ipsum dolor</h1>
           <p className=" text-sm">
             Lorem ipsum dolor sit amet consectetur. Et ultrices auctor tempor
             urna lectus diam pretium.
