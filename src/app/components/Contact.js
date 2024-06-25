@@ -15,8 +15,7 @@ function Contact() {
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -31,8 +30,7 @@ function Contact() {
           <motion.p
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.4,
               x: { type: "spring", stiffness: 60 },
@@ -48,8 +46,7 @@ function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.5,
               x: { type: "spring", stiffness: 60 },
@@ -109,8 +106,7 @@ function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.6,
               x: { type: "spring", stiffness: 60 },
@@ -147,10 +143,9 @@ function Contact() {
           </motion.div>
         </div>
         <motion.form
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 100,y:96 }}
           whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             x: { type: "spring", stiffness: 60 },
