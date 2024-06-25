@@ -5,7 +5,7 @@ import { whileInViewPresence, motion } from "framer-motion";
 
 function Regions() {
   return (
-    <section id="News" className="  px-4 my-24 ">
+    <section id="News" className=" bg-white  px-4 my-24 ">
       <div className=" flex text-center md:text-start flex-col my-8 gap-5 ">
         <motion.h4
           initial={{ opacity: 0, x: -100 }}

@@ -7,7 +7,7 @@ import {   whileInViewPresence, motion } from"framer-motion";
 
 function Services() {
   return (
-    <section id="Services" className=" my-20 ">
+    <section id="Services" className=" my-20 bg-white ">
       <div className=" flex flex-col md:px-4 text-center md:text-start gap-4  md:gap-0">
         <motion.h4
           initial={{ opacity: 0, x: -100 }}

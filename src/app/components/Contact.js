@@ -9,7 +9,7 @@ function Contact() {
     return (
       <section
         id="ContactUs"
-        className=" mb-10 mt-20 md:mt-0 flex items-center flex-col md:flex-row  gap-4  "
+        className=" mb-10 mt-20 bg-white md:mt-0 flex items-center flex-col md:flex-row  gap-4  "
       >
         <div className=" flex flex-col text-center md:text-start px-5 md:w-1/2 gap-5 ">
           <motion.h1
