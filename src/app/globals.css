@@ -57,7 +57,18 @@
     text-align: left;
   }
 }
-
+@font-face {
+  font-family: "nova-light";
+  src: url("/public/FontsFree-Net-Proxima-Nova-Light.otf") format("truetype");
+  /* Add other font variations if available */
+  /* Example for font weight 500 */
+}
+@font-face {
+  font-family: "nova-off";
+  src: url("../../public/fontspring-demo-28.ttf") format("truetype");
+  /* Add other font variations if available */
+  /* Example for font weight 500 */
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

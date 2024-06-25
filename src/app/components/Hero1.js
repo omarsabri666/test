@@ -13,7 +13,7 @@ import NavBar from "./NavBar";
 
 function Hero1() {
   return (
-    <section className=" h-screen md:px-14  relative flex flex-col   py-5">
+    <section className=" h-screen md:px-14 font-nova-light font-nova-of  relative flex flex-col   py-5">
       <video
         className="background-video"
         autoPlay
