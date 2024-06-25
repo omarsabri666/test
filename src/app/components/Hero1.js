@@ -14,41 +14,22 @@ import NavBar from "./NavBar";
 
 function Hero1() {
   return (
-    <section
-      style={{
-        backgroundImage: `
-          linear-gradient(
-            to bottom,
-            rgba(15, 13, 15, 0.86),
-            rgba(12, 20, 42, 0.30),
-            rgba(8, 27, 73, 0.15),
-            rgba(4, 36, 106, 0.32),
-            rgba(0, 43, 135, 1.0)
-          ),
-          url(${Hero.src})
-        `,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-      className=" h-screen md:px-14  relative flex flex-col   py-5"
-    >
-      {/* <video
+    <section className=" h-screen md:px-14  relative flex flex-col   py-5">
+      <video
         className="background-video"
         autoPlay
         muted
         loop
-        src={require("/public/vv.mp4")}
-      /> */}
-      {/* <div className="gradient-overlay"></div> */}
+        src={require("/public/petal_20231227_205731.mp4")}
+      />
+      <div className="gradient-overlay"></div>
 
       <NavBar />
       <main className="    text-white  justify-end text-center md:text-start  h-full flex mb-20  gap-8  flex-col ">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             x: { type: "spring", stiffness: 60 },
@@ -66,8 +47,7 @@ function Hero1() {
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             x: { type: "spring", stiffness: 60 },
