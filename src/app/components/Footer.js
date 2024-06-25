@@ -1,5 +1,8 @@
+"use client"
 import Image from "next/image";
 import Logo from "/public/Logo.svg";
+import { AnimatePresence, motion } from "framer-motion";
+
 
 function Footer() {
   return (
@@ -7,13 +10,37 @@ function Footer() {
       style={{
         background: "linear-gradient(358deg, #002B87 1.81%, #0B44AA 98.86%)",
       }}
-      className=" flex flex-col mt-20  gap-5 "
+      className=" flex flex-col mt-10  gap-5 "
     >
       <div className=" flex  justify-between px-20 flex-col md:flex-row  items-center py-20 ">
-        <div className=" md:w-2/5">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" md:w-2/5"
+        >
           <Image src={Logo} width={200} height={50} alt=" Logo" />
-        </div>
-        <div className=" md:w-3/5 text-center md:text-start space-y-5">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" md:w-3/5 text-center md:text-start space-y-5"
+        >
           <h4 className=" text-[#94D4FF]">Company</h4>
           <ul className=" flex-col md:flex-row  text-sm text-white flex items-center gap-5 ">
             <li>
@@ -35,16 +62,40 @@ function Footer() {
               <a href="#privacy">privacy policy</a>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
       <div className="flex  text-center md:text-start  justify-between px-20 gap-5 md:gap-0  flex-col md:flex-row items-center ">
-        <div className=" md:w-2/5">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" md:w-2/5"
+        >
           <p className=" text-gray-300  md:w-3/4 text-sm ">
             Lorem ipsum dolor sit amet consectetur. Quis suspendisse congue id
             ac mi pretium.
           </p>
-        </div>
-        <div className=" md:w-3/5 flex items-center gap-4 ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" md:w-3/5 flex items-center gap-4 "
+        >
           <h4 className=" mr-2 text-[#94D4FF]">Follow Us</h4>
           <a href="#">
             <svg
@@ -128,7 +179,7 @@ function Footer() {
               </defs>
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
       <div className=" w-full">
         <svg
@@ -151,12 +202,36 @@ function Footer() {
         </svg>
       </div>
       <div className="  flex items-center justify-between  flex-col md:flex-row gap-4 md:gap-0  my-10 px-20">
-        <p className=" text-xs text-gray-400">
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" text-xs text-gray-400"
+        >
           Copyright @ 2023 Duroub Logistics. All Rights Reserved
-        </p>
-        <p className=" text-xs text-gray-400">
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" text-xs text-gray-400"
+        >
           Developed by Brackets Technology
-        </p>
+        </motion.p>
       </div>
     </div>
   );

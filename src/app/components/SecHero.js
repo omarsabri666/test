@@ -1,8 +1,11 @@
+"use client"
 import card1 from "/public/card1.png";
 import card2 from "/public/card2.png";
 import card3 from "/public/card3.png";
 import card4 from "/public/card4.png";
 import Hero from "/public/tt.png";
+import { whileInViewPresence, motion } from "framer-motion";
+
 
 
 function SecHero() {
@@ -49,15 +52,56 @@ function SecHero() {
           </svg>
         </span>
         <div className=" my-20 flex px-20 md:w-2/3 text-center md:text-start   flex-col gap-7">
-          <h1 className=" text-6xl">About Duroub Logistics</h1>
-          <p className=" text-sm md:w-3/4">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" text-6xl"
+          >
+            About Duroub Logistics
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.3,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.2,
+            }}
+            className=" text-sm md:w-3/4"
+          >
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh. Sed
             urna commodo urna bibendum nulla cras tellus. Sit lacus dictum
             porttitor tellus sed fames arcu velit. Quam leo proin ipsum
             molestie. Nibh magna porttitor ac ipsum blandit eget vestibulum.
-          </p>
-          <div className=" text-center md:text-start">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" text-center md:text-start"
+          >
             <a className=" inline-flex items-center text-xl cursor-pointer gap-2 font-[600]">
               Explore More{" "}
               <svg
@@ -81,11 +125,23 @@ function SecHero() {
                 />
               </svg>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="  -translate-y-10    flex items-center  md:flex-row flex-col  md:justify-end  ">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           className="   h-[370px]  md:w-[22%]  w-full  items-center  flex flex-col justify-center "
           style={{
             backgroundImage: `
@@ -108,8 +164,20 @@ function SecHero() {
               Multi temperature WH’s Order fulfillment DC
             </p>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1.2 },
+            ease: "easeIn",
+            duration: 0.4,
+          }}
           className="   h-[370px]  md:w-[22%] w-full   flex flex-col justify-center "
           style={{
             backgroundImage: `
@@ -130,8 +198,20 @@ function SecHero() {
             <h2 className=" text-4xl">One united</h2>
             <p className=" text-gray-300  ">SAP EWM Voice picking</p>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           className="   h-[370px]  md:w-[22%] w-full  flex flex-col justify-center "
           style={{
             backgroundImage: `
@@ -152,8 +232,20 @@ function SecHero() {
             <h2 className=" text-4xl">+60,000</h2>
             <p className=" text-gray-300  ">Pallets</p>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           className="   h-[370px]  md:w-[22%] w-full    flex flex-col justify-center "
           style={{
             backgroundImage: `
@@ -174,7 +266,7 @@ function SecHero() {
             <h2 className=" text-4xl">+300</h2>
             <p className=" text-gray-300  ">Workforce employees </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

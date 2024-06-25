@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 // import NavBar from "./components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,6 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className=" scroll-smooth" lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"></meta>
+        <link rel="icon" href="/favicon.ico" />
+        {/* Add other global meta tags or link elements here */}
+      </Head>
       {/* <NavBar/> */}
       <body className={`${inter.className} bg-white`}>{children}</body>
     </html>

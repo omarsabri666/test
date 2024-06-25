@@ -1,11 +1,14 @@
+"use client"
 import img from "/public/omar.webp"
+import { whileInViewPresence, motion } from"framer-motion";
+
+
 function News() {
     return (
       <section
         id="Careers"
         style={{
-          background:
-            `linear-gradient(179deg, #002B87 42.14%, rgba(11, 68, 170, 0.81) 60.79%, rgba(61, 129, 211, 0.88) 79.44%, rgba(96, 161, 226, 0.77) 99.24%) , url(${img.src})` ,
+          background: `linear-gradient(179deg, #002B87 42.14%, rgba(11, 68, 170, 0.81) 60.79%, rgba(61, 129, 211, 0.88) 79.44%, rgba(96, 161, 226, 0.77) 99.24%) , url(${img.src})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -13,7 +16,23 @@ function News() {
         className="  flex flex-col   relative "
       >
         <div className=" flex items-center flex-col md:flex-row gap-6">
-          <div className=" flex flex-col gap-4 md:w-1/2 px-10 py-20  ">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+
+
+
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" flex flex-col gap-4 md:w-1/2 px-10 py-20  "
+          >
             <h3 className=" md:w-2/3 text-white text-4xl">
               Our Compliance and Regulatory
             </h3>
@@ -21,9 +40,22 @@ function News() {
               Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
               parturient phasellus aliquam. Gravida amet leo quis nam nibh.
             </p>
-          </div>
+          </motion.div>
           <div className=" flex px-10 md:px-0  gap-3 text-white flex-col">
-            <div className=" flex items-center  gap-2">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.1,
+              }}
+              className=" flex items-center  gap-2"
+            >
               <span
                 style={{ background: "rgba(255, 255, 255, 0.10)" }}
                 className="  inline-flex gap-2 items-center px-4 rounded-md py-2 "
@@ -70,8 +102,21 @@ function News() {
                   />
                 </svg>
               </span>
-            </div>
-            <div className=" flex items-center  gap-2">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+
+              transition={{
+                delay: 0.4,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.3,
+              }}
+              className=" flex items-center  gap-2"
+            >
               <span
                 style={{ background: "rgba(255, 255, 255, 0.10)" }}
                 className="  inline-flex gap-2 items-center px-4 rounded-md py-2 "
@@ -118,8 +163,21 @@ function News() {
                   />
                 </svg>
               </span>
-            </div>
-            <div className=" flex items-center  gap-2">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+
+              transition={{
+                delay: 0.5,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.4,
+              }}
+              className=" flex items-center  gap-2"
+            >
               <span
                 style={{ background: "rgba(255, 255, 255, 0.10)" }}
                 className="  inline-flex gap-2 items-center px-4 rounded-md py-2 "
@@ -166,11 +224,24 @@ function News() {
                   />
                 </svg>
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className=" flex flex-col items-center my-32 px-10 md:px-0  gap-4 justify-center text-center  ">
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" flex flex-col items-center my-32 px-10 md:px-0  gap-4 justify-center text-center  "
+        >
           <svg
             width="377"
             height="104"
@@ -211,7 +282,7 @@ function News() {
             Lorem ipsum dolor sit amet consectetur. Iaculis et eget nulla in at
             vulputate pellentesque a vel.
           </p>
-        </div>
+        </motion.div>
       </section>
     );
 }

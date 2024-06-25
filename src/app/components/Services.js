@@ -1,13 +1,46 @@
+"use client"
 import card1 from "/public/card1.png";
 import card6 from "/public/card6.png";
 import card5 from "/public/card5.png";
+import {   whileInViewPresence, motion } from"framer-motion";
+
 
 function Services() {
   return (
     <section id="Services" className=" my-20 ">
       <div className=" flex flex-col md:px-4 text-center md:text-start gap-4  md:gap-0">
-        <h4 className="  text-[#0F0D0F] text-4xl">Duroub Services</h4>
-        <div className=" flex items-center justify-between flex-col gap-4 md:gap-0 md:flex-row  ">
+        <motion.h4
+          initial={{ opacity: 0, x: -100 }}
+                        viewport={{ once: true }}
+
+          whileInView={{ opacity: 1, x: 0 }}
+          
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className="  text-[#0F0D0F] text-4xl"
+        >
+          Duroub Services
+        </motion.h4>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+                        viewport={{ once: true }}
+
+          whileInView={{ opacity: 1, x: 0 }}
+          
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" flex items-center justify-between flex-col gap-4 md:gap-0 md:flex-row  "
+        >
           <p className=" md:w-1/2 mt-4  text-[#0F0D0F]">
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
@@ -35,10 +68,23 @@ function Services() {
               />
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
-      <div className="  translate-y-24 px-4 grid grid-cols-1 md:grid-cols-3 my-8 gap-3">
-        <div
+      <div className="  translate-y-24 px-4 grid grid-cols-1 md:grid-cols-3  gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+                        viewport={{ once: true }}
+
+          whileInView={{ opacity: 1, y: 0 }}
+          
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           style={{
             backgroundImage: `
           linear-gradient(
@@ -57,8 +103,21 @@ function Services() {
           <p className="px-4 text-2xl text-gray-300">
             Transportation, distribution & last mile
           </p>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+                        viewport={{ once: true }}
+
+          whileInView={{ opacity: 1, y: 0 }}
+          
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           style={{
             backgroundImage: `
           linear-gradient(
@@ -77,8 +136,21 @@ function Services() {
           <p className="px-4 text-2xl text-gray-300">
             Warehousing multi temperature (25C to ...
           </p>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+                        viewport={{ once: true }}
+
+          whileInView={{ opacity: 1, y: 0 }}
+          
+          exit={{ opacity: 0, y: 200 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           style={{
             backgroundImage: `
           linear-gradient(
@@ -95,7 +167,7 @@ function Services() {
           className=" rounded-md flex  items-end py-6 h-[370px] "
         >
           <p className="px-4 text-2xl text-gray-300">Cross border transport </p>
-        </div>
+        </motion.div>
       </div>
       <div
         className=" h-[120vh] flex flex-col px-8 justify-center"
@@ -105,16 +177,74 @@ function Services() {
         }}
       >
         <div className=" flex   flex-col gap-3 w-full text-center md:text-start md:w-2/5">
-          <h1 className=" text-[#94D4FF] text-5xl">8 Regions</h1>
-          <h2 className=" text-white text-3xl">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+                          viewport={{ once: true }}
+
+            whileInView={{ opacity: 1, x: 0 }}
+            
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" text-[#94D4FF] text-5xl"
+          >
+            8 Regions
+          </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, x: -100 }}
+                          viewport={{ once: true }}
+
+            whileInView={{ opacity: 1, x: 0 }}
+            
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" text-white text-3xl"
+          >
             of the kingdom fall under our coverage
-          </h2>
-          <p className=" text-sm text-gray-300">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, x: -100 }}
+                          viewport={{ once: true }}
+
+            whileInView={{ opacity: 1, x: 0 }}
+            
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" text-sm text-gray-300"
+          >
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
-          </p>
+          </motion.p>
           <div className="  flex  gap-5  items-center  md:items-start text-white flex-col">
-            <div className=" flex items-center gap-2">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+                            viewport={{ once: true }}
+
+              whileInView={{ opacity: 1, x: 0 }}
+              
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.1,
+              }}
+              className=" flex items-center gap-2"
+            >
               <span
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.10)", // Background color with 10% opacity
@@ -131,8 +261,22 @@ function Services() {
               >
                 Jeddah
               </span>
-            </div>
-            <div className=" flex items-center gap-2">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+                            viewport={{ once: true }}
+
+              whileInView={{ opacity: 1, x: 0 }}
+              
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.1,
+              }}
+              className=" flex items-center gap-2"
+            >
               <span
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.10)", // Background color with 10% opacity
@@ -149,8 +293,25 @@ function Services() {
               >
                 Madinah
               </span>
-            </div>
-            <div className=" flex items-center gap-2">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+                            viewport={{ once: true }}
+
+              whileInView={{ opacity: 1, x: 0 }}
+
+
+              viewport={{ once: true }}
+              
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.1,
+              }}
+              className=" flex items-center gap-2"
+            >
               <span
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.10)", // Background color with 10% opacity
@@ -167,8 +328,22 @@ function Services() {
               >
                 Sakaka
               </span>
-            </div>
-            <div className=" flex items-center gap-2">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+                            viewport={{ once: true }}
+
+              whileInView={{ opacity: 1, x: 0 }}
+              
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 0.1,
+              }}
+              className=" flex items-center gap-2"
+            >
               <span
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.10)", // Background color with 10% opacity
@@ -185,7 +360,7 @@ function Services() {
               >
                 Tabuk
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

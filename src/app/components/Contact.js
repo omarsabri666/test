@@ -1,4 +1,6 @@
 "use client"
+import { whileInViewPresence, motion } from "framer-motion";
+
 function Contact() {
     function Submit(e){
         e.preventDefault()
@@ -7,15 +9,56 @@ function Contact() {
     return (
       <section
         id="ContactUs"
-        className=" my-10 flex items-center flex-col md:flex-row  gap-4  "
+        className=" mb-10 flex items-center flex-col md:flex-row  gap-4  "
       >
         <div className=" flex flex-col text-center md:text-start px-5 md:w-1/2 gap-5 ">
-          <h1 className=" text-5xl  text-[#0F0D0F]">Get in Touch</h1>
-          <p className=" text-[#0F0D0F]">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" text-5xl  text-[#0F0D0F]"
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.4,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.3,
+            }}
+            className=" text-[#0F0D0F]"
+          >
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
-          </p>
-          <div className=" flex  flex-col md:flex-row items-center gap-4">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.5,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.4,
+            }}
+            className=" flex  flex-col md:flex-row items-center gap-4"
+          >
             <a
               className="   inline-flex items-center gap-1 "
               href=":tellto+966 58 168 0000"
@@ -62,8 +105,21 @@ function Contact() {
               </svg>
               Customercare@duroub.com{" "}
             </a>
-          </div>
-          <div className=" flex  items-center gap-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+
+            transition={{
+              delay: 0.6,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.5,
+            }}
+            className=" flex  items-center gap-4"
+          >
             <a className="   inline-flex items-center gap-1 ">
               <svg
                 width="30"
@@ -88,11 +144,22 @@ function Contact() {
               Business park, near to Jamjoom center, Al Hamrah dist. P.O. box:
               8960, KSA. Jeddah 21492{" "}
             </a>
-          </div>
+          </motion.div>
         </div>
-        <form
+        <motion.form
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           onSubmit={Submit}
-          className=" md:w-1/2 w-full mx-2 md:mx-8 translate-y-32  flex flex-col justify-center items-center gap-5 bg-[#F2F4F9] shadow-md rounded-md"
+          className=" md:w-1/2 w-full mx-2 md:mx-12 translate-y-24 md:-translate-x-10  flex flex-col justify-center items-center gap-5 bg-[#F2F4F9] shadow-md rounded-md"
         >
           <input
             type="text"
@@ -142,7 +209,7 @@ function Contact() {
               </svg>
             </button>
           </div>
-        </form>
+        </motion.form>
       </section>
     );
 }

@@ -1,11 +1,46 @@
+"use client"
 import about from "/public/about.png";
+import { whileInViewPresence, motion } from "framer-motion";
+
 
 function Regions() {
   return (
-    <section id="News" className="  px-4 my-20 ">
-      <div className=" flex text-center md:text-start flex-col my-10 gap-5 ">
-        <h4 className="  text-[#0F0D0F] text-4xl">Latest News</h4>
-        <div className=" flex items-center  flex-col md:flex-row gap-4 md:gap-0 justify-between ">
+    <section id="News" className="  px-4 my-24 ">
+      <div className=" flex text-center md:text-start flex-col my-8 gap-5 ">
+        <motion.h4
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }} 
+                        viewport={{ once: true }}
+
+
+          
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className="  text-[#0F0D0F] text-4xl"
+        >
+          Latest News
+        </motion.h4>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }} 
+                        viewport={{ once: true }}
+
+
+          
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" flex items-center  flex-col md:flex-row gap-4 md:gap-0 justify-between "
+        >
           <p className="  md:w-1/2  text-[#0F0D0F]">
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
@@ -33,10 +68,23 @@ function Regions() {
               />
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
       <div className="  flex items-center flex-col md:flex-row gap-4 ">
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }} 
+                        viewport={{ once: true }}
+
+
+          
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
           className=" rounded-md flex items-end relative  md:w-2/5 h-[300px]"
           style={{
             backgroundImage: `
@@ -59,9 +107,24 @@ function Regions() {
           <span className=" text-gray-100 text-sm absolute top-5 bg-[#82bee6] rounded-full px-4 py-2 left-5">
             09 May 2023
           </span>
-        </div>
+        </motion.div>
         <div className=" md:w-3/5 flex flex-col gap-4">
-          <div className=" bg-[#F2F4F9] rounded-md px-4 py-4">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }} 
+                          viewport={{ once: true }}
+
+
+            
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.1,
+            }}
+            className=" bg-[#F2F4F9] rounded-md px-4 py-4"
+          >
             <h3 className=" text-sm text-[#002B87]">09 May 2023</h3>
             <div className=" flex items-center justify-between  ">
               <p className=" text-[#0F0D0F]  ">
@@ -84,8 +147,23 @@ function Regions() {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className=" bg-[#F2F4F9] rounded-md px-4 py-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }} 
+                          viewport={{ once: true }}
+
+
+            
+            transition={{
+              delay: 0.3,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.2,
+            }}
+            className=" bg-[#F2F4F9] rounded-md px-4 py-4"
+          >
             <h3 className=" text-sm text-[#002B87]">09 May 2023</h3>
             <div className=" flex items-center justify-between  ">
               <p className=" text-[#0F0D0F]  ">
@@ -108,8 +186,23 @@ function Regions() {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className=" bg-[#F2F4F9] rounded-md px-4 py-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }} 
+                          viewport={{ once: true }}
+
+
+            
+            transition={{
+              delay: 0.4,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 0.3,
+            }}
+            className=" bg-[#F2F4F9] rounded-md px-4 py-4"
+          >
             <h3 className=" text-sm text-[#002B87]">09 May 2023</h3>
             <div className=" flex items-center justify-between  ">
               <p className=" text-[#0F0D0F]  ">
@@ -132,7 +225,7 @@ function Regions() {
                 </svg>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -28,7 +28,19 @@ function NavBar() {
     }
     return (
       <>
-        <header className=" text-white px-2 md:px-0  relative z-10  ">
+        <motion.header
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 0.1,
+          }}
+          className=" text-white px-2 md:px-0  relative z-10  "
+        >
           <nav className=" flex justify-between   items-center">
             <Image src={Logo} width={200} height={50} alt=" Logo" />
             <ul className=" hidden text-[16px]  md:flex items-center md:mr-10   gap-5">
@@ -58,7 +70,7 @@ function NavBar() {
               <CiMenuBurger size={30} />
             </button>
           </nav>
-        </header>
+        </motion.header>
         <AnimatePresence>
           {open && (
             <motion.div
