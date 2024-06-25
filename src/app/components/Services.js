@@ -77,7 +77,6 @@ function Services() {
 
           whileInView={{ opacity: 1, y: 0 }}
           
-          exit={{ opacity: 0, y: 200 }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -110,7 +109,6 @@ function Services() {
 
           whileInView={{ opacity: 1, y: 0 }}
           
-          exit={{ opacity: 0, y: 200 }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -143,7 +141,6 @@ function Services() {
 
           whileInView={{ opacity: 1, y: 0 }}
           
-          exit={{ opacity: 0, y: 200 }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -301,7 +298,6 @@ function Services() {
               whileInView={{ opacity: 1, x: 0 }}
 
 
-              viewport={{ once: true }}
               
               transition={{
                 delay: 0.2,
