@@ -4,7 +4,6 @@ import Hero from "/public/Video.webp";
 import Logo from "/public/Logo.svg";
 import { CiMenuBurger } from "react-icons/ci";
 import BackgroundVideo from 'next-video/background-video';
-import getStarted from '/public/vv.mp4';
 import { whileInViewPresence, motion } from "framer-motion";
 
 
