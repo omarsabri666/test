@@ -10,15 +10,18 @@ import { whileInViewPresence, motion } from "framer-motion";
 
 function SecHero() {
   return (
-    <section id="About" className=" relative text-white flex flex-col     ">
+    <section
+      id="About"
+      className=" relative text-white  bg-white flex flex-col     "
+    >
       <div
-        className="  text-white flex flex-col relative  md:h-[80vh]   "
+        className="  text-white flex flex-col relative  py-2 md:h-[100vh]   "
         style={{
           backgroundImage: `
           linear-gradient(
             to right,
             rgba(0, 43, 135, 1.0) 0%,
-            rgba(0, 43, 135, 0.8) 80%,
+            rgba(0, 43, 135, 1.0) 50%,
             rgba(0, 43, 135, 0.7) 100%
           ),
           url(${Hero.src})
@@ -28,35 +31,11 @@ function SecHero() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <span className=" absolute top-10 right-8 ">
-          <svg
-            width="55"
-            height="55"
-            viewBox="0 0 72 72"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="1.0252"
-              y="1.40789"
-              width="69.7134"
-              height="69.7134"
-              rx="34.8567"
-              stroke="#94D4FF"
-              stroke-width="2.0504"
-            />
-            <path
-              d="M53.9863 44.425C54.2006 44.3532 54.3356 44.1915 54.3356 44.0148C54.3356 40.5152 52.6042 37.2422 49.7113 35.2729L36.2789 26.1292C36.0527 25.9735 35.7074 25.9735 35.4772 26.1292L22.0521 35.272C19.1595 37.2419 17.4285 40.5151 17.4285 44.0148C17.4285 44.1915 17.5674 44.3502 17.7777 44.425C17.992 44.4999 18.242 44.47 18.4166 44.3532L24.5068 40.2936C31.391 35.7048 40.3585 35.7029 47.2445 40.2889L53.3474 44.3532C53.522 44.47 53.772 44.4969 53.9863 44.425Z"
-              fill="#94D4FF"
-            />
-          </svg>
-        </span>
-        <div className=" my-20 flex px-20 md:w-2/3 text-center md:text-start   flex-col gap-7">
+        <div className=" my-28 flex md:px-16 px-2 md:w-2/3 text-center md:text-start   flex-col gap-7">
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -64,15 +43,14 @@ function SecHero() {
               ease: "easeIn",
               duration: 0.1,
             }}
-            className=" text-6xl"
+            className=" font-nova  leading-[80px] font-[300]  text-[70px]"
           >
             About Duroub Logistics
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.3,
               x: { type: "spring", stiffness: 60 },
@@ -80,7 +58,7 @@ function SecHero() {
               ease: "easeIn",
               duration: 0.2,
             }}
-            className=" text-sm md:w-3/4"
+            className=" text-[22px] font-nova-regular md:w-3/4"
           >
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh. Sed
@@ -91,8 +69,7 @@ function SecHero() {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -132,8 +109,7 @@ function SecHero() {
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -158,8 +134,8 @@ function SecHero() {
           }}
         >
           <div className=" pt-16 flex flex-col px-4  ">
-            <h2 className=" text-4xl">25C to +25C</h2>
-            <p className=" text-gray-300 ">
+            <h2 className=" text-4xl font-nova-regular">25C to +25C</h2>
+            <p className=" text-gray-300 font-nova ">
               Multi temperature WH’s Order fulfillment DC
             </p>
           </div>
@@ -167,8 +143,7 @@ function SecHero() {
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -193,15 +168,14 @@ function SecHero() {
           }}
         >
           <div className=" pt-16 flex flex-col  px-4">
-            <h2 className=" text-4xl">One united</h2>
-            <p className=" text-gray-300  ">SAP EWM Voice picking</p>
+            <h2 className=" text-4xl  font-nova-regular ">One united</h2>
+            <p className=" text-gray-300  font-nova  ">SAP EWM Voice picking</p>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -226,15 +200,14 @@ function SecHero() {
           }}
         >
           <div className=" pt-16 flex flex-col  px-4">
-            <h2 className=" text-4xl">+60,000</h2>
-            <p className=" text-gray-300  ">Pallets</p>
+            <h2 className=" text-4xl  font-nova-regular ">+60,000</h2>
+            <p className=" text-gray-300  font-nova  ">Pallets</p>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           transition={{
             delay: 0.2,
             y: { type: "spring", stiffness: 60 },
@@ -259,8 +232,8 @@ function SecHero() {
           }}
         >
           <div className=" pt-16 flex flex-col  px-4">
-            <h2 className=" text-4xl">+300</h2>
-            <p className=" text-gray-300  ">Workforce employees </p>
+            <h2 className=" text-4xl  font-nova-regular ">+300</h2>
+            <p className=" text-gray-300  font-nova  ">Workforce employees </p>
           </div>
         </motion.div>
       </div>

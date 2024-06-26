@@ -13,7 +13,7 @@ import NavBar from "./NavBar";
 
 function Hero1() {
   return (
-    <section className=" h-screen md:px-14 font-nova-light font-nova-of  relative flex flex-col   py-5">
+    <section className="  h-screen md:px-14 font-nova  px-2  relative flex flex-col   ">
       <video
         className="background-video"
         autoPlay
@@ -26,7 +26,7 @@ function Hero1() {
       <NavBar />
       <main className=" content   text-white  justify-end text-center md:text-start  h-full flex   gap-8  flex-col ">
         <motion.div
-        className=" flex flex-col gap-8 mt-20"
+          className=" flex flex-col gap-8 mt-20"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -38,8 +38,10 @@ function Hero1() {
             duration: 0.1,
           }}
         >
-          <h1 className="  text-7xl ">Lorem ipsum dolor</h1>
-          <p className=" text-sm">
+          <h1 className="  text-[90px] font-nova font-[300] ">
+            Lorem ipsum dolor
+          </h1>{" "}
+          <p className="  md:w-2/3   text-white font-nova-regular font-[400] text-[22px]">
             Lorem ipsum dolor sit amet consectetur. Et ultrices auctor tempor
             urna lectus diam pretium.
           </p>
@@ -57,7 +59,7 @@ function Hero1() {
           }}
           className=" text-center md:text-start"
         >
-          <a className=" cursor-pointer inline-flex items-center font-[600] text-xl gap-2 ">
+          <a className=" cursor-pointer font-nova-semibold inline-flex items-center font-[600] text-[25px] gap-2 ">
             {" "}
             Discover More{" "}
             <svg
@@ -80,6 +82,14 @@ function Hero1() {
                 fill="#94D4FF"
               />
             </svg>
+          </a>
+          <a className=" hidden md:flex" href="#About">
+            <div className="scroll-down">
+              <div className="arrow"></div>
+              <div className="arrow"></div>
+              <div className="arrow"></div>
+              <div className="arrow"></div>
+            </div>
           </a>
         </motion.div>
       </main>

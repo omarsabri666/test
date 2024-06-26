@@ -1,8 +1,7 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Logo from "/public/Logo.svg";
 import { AnimatePresence, motion } from "framer-motion";
-
 
 function Footer() {
   return (
@@ -10,7 +9,7 @@ function Footer() {
       style={{
         background: "linear-gradient(358deg, #002B87 1.81%, #0B44AA 98.86%)",
       }}
-      className=" flex flex-col mt-10  gap-5 "
+      className=" flex font-nova flex-col mt-10  gap-5 "
     >
       <div className=" flex  justify-between px-20 flex-col md:flex-row  items-center py-20 ">
         <motion.div
@@ -41,8 +40,8 @@ function Footer() {
           }}
           className=" md:w-3/5 text-center md:text-start space-y-5"
         >
-          <h4 className=" text-[#94D4FF]">Company</h4>
-          <ul className=" flex-col md:flex-row  text-sm text-white flex items-center gap-5 ">
+          <h4 className=" font-nova text-[#94D4FF]">Company</h4>
+          <ul className=" flex-col md:flex-row  font-nova-regular text-sm text-white flex items-center gap-5 ">
             <li>
               <a href="#About">About Us</a>
             </li>
@@ -213,7 +212,7 @@ function Footer() {
             ease: "easeIn",
             duration: 0.1,
           }}
-          className=" text-xs text-gray-400"
+          className=" text-xs font-nova-light text-gray-400"
         >
           Copyright @ 2023 Duroub Logistics. All Rights Reserved
         </motion.p>

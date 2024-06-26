@@ -11,10 +11,12 @@ import about from "/public/about.png";
 import News from "./components/News";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollUp from "./components/ScrollUp";
 
 export default function Home() {
   return (
     <main className=" overflow-x-hidden">
+      <ScrollUp/>
      <Hero1/>
     <SecHero/>
     <Services/>

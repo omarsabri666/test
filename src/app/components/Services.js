@@ -1,20 +1,35 @@
-"use client"
+"use client";
 import card1 from "/public/card1.png";
 import card6 from "/public/card6.png";
 import card5 from "/public/card5.png";
-import {   whileInViewPresence, motion } from"framer-motion";
+import { whileInViewPresence, motion } from "framer-motion";
+import ServicesCard from "./ServicesCard";
 
-
+const cards = [
+  {
+    text: "            Transportation, distribution & last mil",
+    img: card5.src,
+    id: 1,
+  },
+  {
+    text: "            Warehousing multi temperature (25C to ...",
+    img: card1.src,
+    id: 2,
+  },
+  {
+    text: "Cross border transport",
+    img: card6.src,
+    id: 3,
+  },
+];
 function Services() {
   return (
-    <section id="Services" className=" my-20 bg-white ">
-      <div className=" flex flex-col md:px-4 text-center md:text-start gap-4  md:gap-0">
+    <section id="Services" className=" py-20 bg-white ">
+      <div className=" flex flex-col md:px-14 text-center md:text-start gap-4  md:gap-0">
         <motion.h4
           initial={{ opacity: 0, x: -100 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 0 }}
-          
           transition={{
             delay: 0.2,
             x: { type: "spring", stiffness: 60 },
@@ -22,16 +37,14 @@ function Services() {
             ease: "easeIn",
             duration: 0.1,
           }}
-          className="  text-[#0F0D0F] text-4xl"
+          className="  text-[#0F0D0F] font-nova text-[70px] font-[300]"
         >
           Duroub Services
         </motion.h4>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-                        viewport={{ once: true }}
-
+          viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 0 }}
-          
           transition={{
             delay: 0.2,
             x: { type: "spring", stiffness: 60 },
@@ -41,7 +54,7 @@ function Services() {
           }}
           className=" flex items-center justify-between flex-col gap-4 md:gap-0 md:flex-row  "
         >
-          <p className=" md:w-1/2 mt-4  text-[#0F0D0F]">
+          <p className=" md:w-1/2 mt-4 font-nova-regular text-[20px]  text-[#0F0D0F]">
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
           </p>
@@ -70,104 +83,13 @@ function Services() {
           </a>
         </motion.div>
       </div>
-      <div className="  translate-y-24 px-4 grid grid-cols-1 md:grid-cols-3  gap-3">
-        <motion.div
-          initial={{ opacity: 0, y: 200 }}
-                        viewport={{ once: true }}
-
-          whileInView={{ opacity: 1, y: 0 }}
-          
-          transition={{
-            delay: 0.2,
-            y: { type: "spring", stiffness: 60 },
-            opacity: { duration: 1 },
-            ease: "easeIn",
-            duration: 0.1,
-          }}
-          style={{
-            backgroundImage: `
-          linear-gradient(
-            to bottom,
-           rgba(15, 13, 15, 0.7) 0%,
-           rgba(15, 13, 15, 0.7) 100%
-          ),
-          url(${card5.src})
-        `,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          className=" rounded-md flex  items-end py-6 h-[370px] "
-        >
-          <p className="px-4 text-2xl text-gray-300">
-            Transportation, distribution & last mile
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 200 }}
-                        viewport={{ once: true }}
-
-          whileInView={{ opacity: 1, y: 0 }}
-          
-          transition={{
-            delay: 0.2,
-            y: { type: "spring", stiffness: 60 },
-            opacity: { duration: 1 },
-            ease: "easeIn",
-            duration: 0.1,
-          }}
-          style={{
-            backgroundImage: `
-          linear-gradient(
-            to bottom,
-           rgba(15, 13, 15, 0.7) 0%,
-           rgba(15, 13, 15, 0.7) 100%
-          ),
-          url(${card1.src})
-        `,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          className=" rounded-md flex  items-end py-6 h-[370px] "
-        >
-          <p className="px-4 text-2xl text-gray-300">
-            Warehousing multi temperature (25C to ...
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 200 }}
-                        viewport={{ once: true }}
-
-          whileInView={{ opacity: 1, y: 0 }}
-          
-          transition={{
-            delay: 0.2,
-            y: { type: "spring", stiffness: 60 },
-            opacity: { duration: 1 },
-            ease: "easeIn",
-            duration: 0.1,
-          }}
-          style={{
-            backgroundImage: `
-          linear-gradient(
-            to bottom,
-           rgba(15, 13, 15, 0.7) 0%,
-           rgba(15, 13, 15, 0.7) 100%
-          ),
-          url(${card6.src})
-        `,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-          className=" rounded-md flex  items-end py-6 h-[370px] "
-        >
-          <p className="px-4 text-2xl text-gray-300">Cross border transport </p>
-        </motion.div>
+      <div className="  translate-y-24 px-8 grid grid-cols-1 md:grid-cols-3  gap-3">
+        {cards.map((card) => (
+          <ServicesCard key={card.id} card={card} />
+        ))}
       </div>
       <div
-        className=" h-[120vh] flex flex-col px-8 justify-center"
+        className=" md:h-[140vh] md:my-20  flex flex-col md:px-14  px-8 justify-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, #002B87
 , #002B87 )`,
@@ -176,10 +98,8 @@ function Services() {
         <div className=" flex   flex-col gap-3 w-full text-center md:text-start md:w-2/5">
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
-            
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -187,16 +107,14 @@ function Services() {
               ease: "easeIn",
               duration: 0.1,
             }}
-            className=" text-[#94D4FF] text-5xl"
+            className=" text-[#94D4FF] font-nova-semibold  text-7xl"
           >
             8 Regions
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, x: -100 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
-            
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -204,16 +122,14 @@ function Services() {
               ease: "easeIn",
               duration: 0.1,
             }}
-            className=" text-white text-3xl"
+            className=" text-white  font-nova text-5xl"
           >
             of the kingdom fall under our coverage
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, x: -100 }}
-                          viewport={{ once: true }}
-
+            viewport={{ once: true }}
             whileInView={{ opacity: 1, x: 0 }}
-            
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -221,7 +137,7 @@ function Services() {
               ease: "easeIn",
               duration: 0.1,
             }}
-            className=" text-sm text-gray-300"
+            className=" text-[17px] font-nova-regular  text-gray-300"
           >
             Lorem ipsum dolor sit amet consectetur. Viverra justo odio platea
             parturient phasellus aliquam. Gravida amet leo quis nam nibh.
@@ -229,10 +145,8 @@ function Services() {
           <div className="  flex  gap-5  items-center  md:items-start text-white flex-col">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-                            viewport={{ once: true }}
-
+              viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              
               transition={{
                 delay: 0.2,
                 x: { type: "spring", stiffness: 60 },
@@ -261,10 +175,8 @@ function Services() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-                            viewport={{ once: true }}
-
+              viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              
               transition={{
                 delay: 0.2,
                 x: { type: "spring", stiffness: 60 },
@@ -293,12 +205,8 @@ function Services() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-                            viewport={{ once: true }}
-
+              viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-
-
-              
               transition={{
                 delay: 0.2,
                 x: { type: "spring", stiffness: 60 },
@@ -327,10 +235,8 @@ function Services() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-                            viewport={{ once: true }}
-
+              viewport={{ once: true }}
               whileInView={{ opacity: 1, x: 0 }}
-              
               transition={{
                 delay: 0.2,
                 x: { type: "spring", stiffness: 60 },
@@ -363,5 +269,4 @@ function Services() {
     </section>
   );
 }
-
 export default Services;
