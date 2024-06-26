@@ -83,7 +83,7 @@ function NavBar() {
               />
               AR
             </button> */}
-          <button className=" inline-flex items-center border border-[#94D4FF]  rounded-full ">
+          <button className=" hidden md:inline-flex items-center border border-[#94D4FF]  rounded-full ">
             <span
               className={`${
                 isActive === "en" ? "bg-[#94D4FF] text-black" : "text-white"

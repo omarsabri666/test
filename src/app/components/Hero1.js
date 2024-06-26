@@ -13,7 +13,7 @@ import NavBar from "./NavBar";
 
 function Hero1() {
   return (
-    <section className="  h-screen md:px-14 font-nova  px-2  relative flex flex-col   ">
+    <section className="  h-screen md:px-14 font-nova   relative flex flex-col   ">
       <video
         className="background-video"
         autoPlay
@@ -38,10 +38,10 @@ function Hero1() {
             duration: 0.1,
           }}
         >
-          <h1 className="  text-[90px] font-nova font-[300] ">
+          <h1 className="  px-2 md:px-0 text-[90px] font-nova font-[300] ">
             Lorem ipsum dolor
           </h1>{" "}
-          <p className="  md:w-2/3   text-white font-nova-regular font-[400] text-[22px]">
+          <p className="  md:w-2/3  px-2 md:px-0  text-white font-nova-regular font-[400] text-[22px]">
             Lorem ipsum dolor sit amet consectetur. Et ultrices auctor tempor
             urna lectus diam pretium.
           </p>

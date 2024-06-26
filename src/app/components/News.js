@@ -234,6 +234,7 @@ function News() {
         className=" flex flex-col items-center my-32 px-10 md:px-0  gap-4 justify-center text-center  "
       >
         <svg
+        className=" px-2 md:px-0"
           width="377"
           height="104"
           viewBox="0 0 377 104"

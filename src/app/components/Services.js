@@ -83,19 +83,19 @@ function Services() {
           </a>
         </motion.div>
       </div>
-      <div className="  translate-y-24 px-8 grid grid-cols-1 md:grid-cols-3  gap-3">
+      <div className="  translate-y-0 md:translate-y-24 px-8 grid grid-cols-1 md:grid-cols-3 py-5 md:py-0  gap-3">
         {cards.map((card) => (
           <ServicesCard key={card.id} card={card} />
         ))}
       </div>
       <div
-        className=" md:h-[140vh] md:my-20  flex flex-col md:px-14  px-8 justify-center"
+        className=" md:h-[140vh] md:my-20  flex flex-col md:px-14 py-5 md:py-0  px-8 justify-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, #002B87
 , #002B87 )`,
         }}
       >
-        <div className=" flex   flex-col gap-3 w-full text-center md:text-start md:w-2/5">
+        <div className=" flex py-5 md:py-0   flex-col gap-3 w-full text-center md:text-start md:w-2/5">
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
             viewport={{ once: true }}
